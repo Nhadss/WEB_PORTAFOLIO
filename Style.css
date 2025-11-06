@@ -1,0 +1,285 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px; /* por ejemplo */
+  z-index: 1000;
+}
+
+
+/* === Barra de navegación === */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(250, 223, 236, 0.8); /* semitransparente */
+  backdrop-filter: blur(6px); /* suaviza fondo si hay imagen */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+#navbar a:hover {
+  color: var(--color-accent, #4A90E2); /* o el color que definas */
+}
+
+body {
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.quien-soy {
+  background-image: url('img/via_lactea_Epecuen.jpeg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 0px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.quien-soy .contenido {
+  background-color: rgba(0, 0, 0, 0.5); /* mejora legibilidad del texto */
+  color: white;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: auto;
+}
+
+
+.formacion {
+  background-color: #e6baba; /* o el color que prefieras */
+  padding: 40px 20px; /* opcional: para que el contenido respire */
+  text-align: center;
+  color: #090909; /* color del párrafo */
+}
+.formacion ul {
+  list-style-position: inside;
+  text-align: center;
+  padding-left: 0;
+}
+
+
+.experiencia-laboral {
+  padding: 40px 20px;
+  background-color: #455041; /* verde */
+  color: #f9d6b4;
+}
+
+.experiencia-laboral h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ebcdac; /* opcional: para que contraste con el fondo */
+}
+
+.tabla-experiencia {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: inherit; /* hereda el color de fondo de la sección */
+  border: 1px solid #ccc;
+}
+
+.tabla-experiencia th,
+.tabla-experiencia td {
+  border: 1px solid #ccc;
+  padding: 10px 14px;
+  text-align: center;
+  vertical-align: top;
+  color: inherit; /* hereda el color de texto de la sección */
+}
+
+.tabla-experiencia thead {
+  background-color: rgba(255, 255, 255, 0.1); /* sutil contraste para encabezado */
+  font-weight: bold;
+}
+
+.intereses h2 {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+}
+
+.intereses p {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+}
+
+.intereses {
+  padding: 40px 20px;
+  background-color: #ebcdac;
+  color: #1a1a1a;
+}
+
+.intereses-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex start; /* ← esto alinea verticalmente las img si tienen distinta altura */
+}
+
+.interes {
+  width: 200px;
+  text-align: center;
+}
+
+.interes img {
+  width: 200px;
+  height: 200px;
+ 
+  object-fit: cover;
+  border-radius: 8px;/* opcional: bordes redondeados */
+}
+
+.interes p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.intereses-contenedor {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: auto;
+  background-color: #f9cbcb; /* gris suave */
+  padding: 20px 20px;
+}
+
+.contacto h2 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #333;
+}
+
+.contacto form {
+  padding: 10px;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto .campo {
+  margin-bottom: 20px; /* controla el espaciado entre campos */
+}
+
+.contacto label {
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.contacto input[type="text"],
+.contacto input[type="email"],
+.contacto input[type="tel"],
+.contacto input[type="date"],
+.contacto input[type="file"],
+.contacto textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contacto input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.contacto .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contacto button {
+  background-color: #53d0bf; /* verde tipo "Send Message" */
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contacto button:hover {
+  background-color: #32796a;
+}
+
+
+footer {
+  background-color: #49baab;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+}               
+
+footer p {
+  margin-bottom: 5px 0;
+  line-height: 1.5;
+   } 
+
+.redes-sociales {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.redes-sociales svg {
+  width: 28px;
+  height: 28px;
+  stroke: currentColor; /* usa el color del texto o del link */
+  fill: none; /* si el SVG no tiene relleno */
+  transition: transform 0.2s ease;
+}
+
+
+.redes-sociales a:hover svg {
+  transform: scale(1.2);
+}
